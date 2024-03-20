@@ -1,11 +1,14 @@
 {
   "name": "bonglog",
   "packageManager": "yarn@4.1.1",
+  "homepage": "hhtps://jungcome7.github.io/bonglog",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d .next"
   },
   "dependencies": {
     "@radix-ui/colors": "^3.0.0",
@@ -19,6 +22,7 @@
   },
   "devDependencies": {
     "@pandacss/dev": "^0.35.0",
+    "@types/gh-pages": "^6",
     "@types/node": "^20.11.28",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
@@ -27,6 +31,7 @@
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
+    "gh-pages": "^6.1.1",
     "prettier": "^3.2.5",
     "tslib": "^2.6.2",
     "typescript": "^5.4.2"
