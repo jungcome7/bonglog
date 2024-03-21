@@ -1,16 +1,19 @@
 {
   "name": "bonglog",
   "packageManager": "yarn@4.1.1",
-  "homepage": "hhtps://jungcome7.github.io/bonglog",
+  "homepage": "jungcome7.github.io/bonglog",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d .next"
+    "predeploy": "yarn build && touch ./out/.nojekyll",
+    "deploy": "gh-pages -d out -t true"
   },
   "dependencies": {
+    "@mdx-js/loader": "^3.0.1",
+    "@mdx-js/react": "^3.0.1",
+    "@next/mdx": "^14.1.4",
     "@radix-ui/colors": "^3.0.0",
     "@radix-ui/themes": "^2.0.3",
     "axios": "^1.6.8",
@@ -23,6 +26,7 @@
   "devDependencies": {
     "@pandacss/dev": "^0.35.0",
     "@types/gh-pages": "^6",
+    "@types/mdx": "^2.0.11",
     "@types/node": "^20.11.28",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",

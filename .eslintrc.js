@@ -15,6 +15,7 @@ module.exports = {
     semi: ['error', 'always'],
     indent: ['error', 2, { SwitchCase: 1, ignoredNodes: ['TemplateLiteral'] }],
     'no-var': 'error',
+    '@typescript-eslint/no-var-requires': 'off',
     'max-len': 'off',
     'space-infix-ops': 'error',
     'comma-dangle': ['error', 'always-multiline'],
